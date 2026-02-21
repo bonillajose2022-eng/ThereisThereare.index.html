@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>There Is / There Are 🌟 English for Kids</title>
+  <meta name="description" content="Interactive English grammar site for kids aged 8-12. Learn 'There is' and 'There are' with fun exercises, games, and quizzes!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== CELEBRATION OVERLAY ===================== -->
+<div class="celebration" id="celebration" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="header-top">
+    <div class="site-title">
+      <span class="emoji" aria-hidden="true">🌟</span>
+      There Is / There Are
+    </div>
+    <div class="header-actions">
+      <div class="score-badge" id="scoreBadge" aria-live="polite" aria-label="Your score">⭐ 0 pts</div>
+      <button class="btn-teacher" id="teacherBtn" aria-label="Toggle teacher mode">🔑 Teacher</button>
+    </div>
+  </div>
+  <div class="teacher-banner" id="teacherBanner" role="alert">
+    🎓 TEACHER MODE ACTIVE — Answers and reset options are visible.
+  </div>
+  <nav role="navigation" aria-label="Site sections">
+    <button class="nav-tab active" data-section="learn">📖 Learn</button>
+    <button class="nav-tab" data-section="forms">📝 Forms</button>
+    <button class="nav-tab" data-section="prepositions">📍 Prepositions</button>
+    <button class="nav-tab" data-section="glossary">🔤 Glossary</button>
+    <button class="nav-tab" data-section="fill">✏️ Fill Blanks</button>
+    <button class="nav-tab" data-section="mcq">🔘 MCQ</button>
+    <button class="nav-tab" data-section="matching">🔗 Matching</button>
+    <button class="nav-tab" data-section="images">🖼️ Images</button>
+    <button class="nav-tab" data-section="truefalse">✅ True/False</button>
+    <button class="nav-tab" data-section="writing">✍️ Writing</button>
+    <button class="nav-tab" data-section="unscramble">🔀 Unscramble</button>
+    <button class="nav-tab" data-section="games">🎮 Games</button>
+    <button class="nav-tab" data-section="quiz">🏆 Final Quiz</button>
+  </nav>
+</header>
+
+<!-- ===================== PROGRESS BAR ===================== -->
+<div class="progress-bar-container" role="progressbar" aria-label="Your progress through the exercises">
+  <span class="progress-label">📊 Progress:</span>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <span class="progress-pct" id="progressPct" aria-live="polite">0%</span>
+</div>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+  <!-- ============================================================
+       SECTION: LEARN
+       ============================================================ -->
+  <section class="section active" id="sec-learn" aria-label="Learn section">
+    <div class="section-header">
+      <h2>📖 What is "There is / There are"?</h2>
+      <p>Learn when and how to use these important grammar structures!</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🤔 What does it mean?</div>
+      <p>We use <span class="highlight">There is</span> and <span class="highlight">There are</span> to say that something <strong>exists</strong> in a place — like telling someone what you can find somewhere.</p>
+      <div class="es-tip">Usamos "There is / There are" para decir que algo existe en un lugar. En español sería como decir "Hay un gato" o "Hay gatos".</div>
+      <div class="divider"></div>
+      <div class="grammar-box green">
+        <p>🐈 <span class="highlight-green">There is</span> a cat in the garden. → <em>Hay un gato en el jardín.</em></p>
+        <p>📚 <span class="highlight-green">There are</span> books on the shelf. → <em>Hay libros en el estante.</em></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📏 The Golden Rule</div>
+      <table class="grammar-table">
+        <thead>
+          <tr><th>Use</th><th>When?</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong class="highlight">There IS</strong></td>
+            <td>1 thing (singular) OR uncountable nouns</td>
+            <td>There is <u>a dog</u>. / There is <u>milk</u>.</td>
+          </tr>
+          <tr>
+            <td><strong class="highlight">There ARE</strong></td>
+            <td>2 or more things (plural)</td>
+            <td>There are <u>three cats</u>. / There are <u>books</u>.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="es-tip">Regla de oro: "There IS" con singular (uno / incontable), "There ARE" con plural (dos o más).</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔢 Using a/an, some/any, numbers</div>
+      <ul class="example-list">
+        <li>There is <span class="highlight">a</span> pen on the desk. <em>(one countable thing)</em></li>
+        <li>There is <span class="highlight">an</span> apple in the bag. <em>(vowel sound → an)</em></li>
+        <li>There are <span class="highlight">some</span> flowers in the vase. <em>(some = a few, positive)</em></li>
+        <li>Is there <span class="highlight">any</span> juice in the fridge? <em>(any = in questions/negative)</em></li>
+        <li>There is <span class="highlight">some</span> water in the bottle. <em>(uncountable)</em></li>
+        <li>There are <span class="highlight">12</span> students in the class. <em>(number + plural)</em></li>
+      </ul>
+      <div class="es-tip">"Some" se usa en frases afirmativas; "any" en preguntas y negaciones. "A" o "an" con nombres en singular contables.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">❓ How many? Questions with numbers</div>
+      <div class="formula">How many + [plural noun] + ARE THERE + [place]?</div>
+      <ul class="example-list">
+        <li>How many <span class="highlight">students</span> are there in the school? → There are <span class="highlight">200</span> students.</li>
+        <li>How many <span class="highlight">apples</span> are there on the table? → There are <span class="highlight">three</span> apples.</li>
+        <li>How many <span class="highlight">cats</span> are there? → There is only <span class="highlight">one</span> cat.</li>
+      </ul>
+      <div class="es-tip">"How many...?" sirve para preguntar la cantidad. Siempre usamos "are there" después del nombre plural.</div>
+    </div>
+
+    <!-- Scene illustration -->
+    <div class="card">
+      <div class="card-title">🏫 Classroom Scene</div>
+      <div class="scene-container" aria-label="Illustration of a classroom">
+        <object data="assets/classroom.svg" type="image/svg+xml" width="100%" style="min-height:200px;">
+          <img src="assets/classroom.svg" alt="A colorful classroom with desks, chairs, a blackboard, books, windows and a globe">
+        </object>
+        <div class="scene-caption">Look carefully — you'll use this scene in exercises! 👀</div>
+      </div>
+      <ul class="example-list">
+        <li>There is <span class="highlight">one</span> blackboard in the classroom.</li>
+        <li>There are <span class="highlight">three</span> books on the teacher's desk.</li>
+        <li>There is <span class="highlight">a</span> globe near the wall.</li>
+        <li>There are <span class="highlight">two</span> windows in the classroom.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: FORMS (Affirmative / Negative / Interrogative)
+       ============================================================ -->
+  <section class="section" id="sec-forms" aria-label="Grammar forms section">
+    <div class="section-header">
+      <h2>📝 All the Forms</h2>
+      <p>Affirmative, Negative, and Question forms with short answers</p>
+    </div>
+
+    <!-- AFFIRMATIVE -->
+    <div class="card">
+      <div class="card-title">✅ Affirmative (Positive)</div>
+      <div class="formula">There IS + a/an/some + singular/uncountable noun</div>
+      <div class="formula">There ARE + some + plural noun</div>
+      <table class="grammar-table">
+        <thead><tr><th>Form</th><th>Example</th><th>Spanish</th></tr></thead>
+        <tbody>
+          <tr><td>There IS + singular</td><td>There is <u>a cat</u>.</td><td>Hay un gato.</td></tr>
+          <tr><td>There IS + uncountable</td><td>There is <u>some water</u>.</td><td>Hay agua.</td></tr>
+          <tr><td>There ARE + plural</td><td>There are <u>five dogs</u>.</td><td>Hay cinco perros.</td></tr>
+          <tr><td>Short form (IS)</td><td>There<u>'s</u> a book here.</td><td>Hay un libro aquí.</td></tr>
+        </tbody>
+      </table>
+      <div class="es-tip">La contracción "There's" = "There is". No existe "There're" en inglés formal.</div>
+    </div>
+
+    <!-- NEGATIVE -->
+    <div class="card">
+      <div class="card-title">❌ Negative</div>
+      <div class="formula" style="background:linear-gradient(135deg,var(--secondary),#FF8E8E);">There IS NOT / ISN'T + a/an/any + noun</div>
+      <div class="formula" style="background:linear-gradient(135deg,var(--secondary),#FF8E8E);">There ARE NOT / AREN'T + any + plural noun</div>
+      <table class="grammar-table">
+        <thead><tr><th>Long Form</th><th>Short Form</th><th>Spanish</th></tr></thead>
+        <tbody>
+          <tr><td>There is not a cat.</td><td>There <u>isn't</u> a cat.</td><td>No hay un gato.</td></tr>
+          <tr><td>There is not any milk.</td><td>There <u>isn't</u> any milk.</td><td>No hay leche.</td></tr>
+          <tr><td>There are not any books.</td><td>There <u>aren't</u> any books.</td><td>No hay libros.</td></tr>
+          <tr><td>There are no dogs.</td><td>—</td><td>No hay perros.</td></tr>
+        </tbody>
+      </table>
+      <div class="grammar-box red">
+        <p>⚠️ In negatives, use <strong>any</strong> or <strong>no</strong> (not "some").</p>
+        <p>✅ There aren't <strong>any</strong> apples. / There are <strong>no</strong> apples.</p>
+        <p>❌ There aren't <s>some</s> apples. ← WRONG!</p>
+      </div>
+      <div class="es-tip">En negativo usamos "any" o "no", nunca "some". "Isn't" = is not; "aren't" = are not.</div>
+    </div>
+
+    <!-- INTERROGATIVE -->
+    <div class="card">
+      <div class="card-title">❓ Questions (Interrogative)</div>
+      <div class="formula" style="background:linear-gradient(135deg,#0D6E8A,var(--accent3));">IS there + a/an/any + noun?</div>
+      <div class="formula" style="background:linear-gradient(135deg,#0D6E8A,var(--accent3));">ARE there + any + plural noun?</div>
+      <table class="grammar-table">
+        <thead><tr><th>Question</th><th>Short Answers</th></tr></thead>
+        <tbody>
+          <tr><td>Is there a dog?</td><td>Yes, there <strong>is</strong>. / No, there <strong>isn't</strong>.</td></tr>
+          <tr><td>Is there any water?</td><td>Yes, there <strong>is</strong>. / No, there <strong>isn't</strong>.</td></tr>
+          <tr><td>Are there any books?</td><td>Yes, there <strong>are</strong>. / No, there <strong>aren't</strong>.</td></tr>
+          <tr><td>Are there 5 chairs?</td><td>Yes, there <strong>are</strong>. / No, there <strong>aren't</strong>.</td></tr>
+          <tr><td>How many cats are there?</td><td>There are <strong>three</strong> cats.</td></tr>
+        </tbody>
+      </table>
+      <div class="es-tip">En preguntas, el verbo "is/are" va ANTES de "there". Para respuestas cortas: "Yes, there is/are" o "No, there isn't/aren't".</div>
+    </div>
+
+    <!-- ERRORS SECTION -->
+    <div class="card">
+      <div class="card-title">⚠️ Common Mistakes — ¡Errores frecuentes!</div>
+      <div class="error-card">
+        <p>❌ <span class="wrong-text">There are a cat in the garden.</span></p>
+        <p>✅ <span class="right-text">There is a cat in the garden.</span></p>
+        <p class="explanation">👆 "a cat" is SINGULAR → use "There is", not "There are".</p>
+      </div>
+      <div class="error-card">
+        <p>❌ <span class="wrong-text">There is three dogs.</span></p>
+        <p>✅ <span class="right-text">There are three dogs.</span></p>
+        <p class="explanation">👆 "three dogs" is PLURAL → use "There are".</p>
+      </div>
+      <div class="error-card">
+        <p>❌ <span class="wrong-text">Is there some milk? — No, there are some milk.</span></p>
+        <p>✅ <span class="right-text">Is there any milk? — No, there isn't any milk.</span></p>
+        <p class="explanation">👆 Use "any" in questions and negatives. "milk" is uncountable → "There isn't" (singular).</p>
+      </div>
+      <div class="error-card">
+        <p>❌ <span class="wrong-text">There are not a book on the desk.</span></p>
+        <p>✅ <span class="right-text">There isn't a book on the desk.</span></p>
+        <p class="explanation">👆 "a book" is singular → use "There isn't" (isn't = is not).</p>
+      </div>
+      <div class="error-card">
+        <p>❌ <span class="wrong-text">Are there a computer in the room?</span></p>
+        <p>✅ <span class="right-text">Is there a computer in the room?</span></p>
+        <p class="explanation">👆 "a computer" is singular → question is "Is there?"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: PREPOSITIONS
+       ============================================================ -->
+  <section class="section" id="sec-prepositions" aria-label="Prepositions of place section">
+    <div class="section-header">
+      <h2>📍 Prepositions of Place</h2>
+      <p>Learn where things are! Used together with "There is / There are"</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Las preposiciones de lugar nos dicen DÓNDE están las cosas. Se usan después del nombre.</div>
+
+    <div class="prep-grid">
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">📦</div>
+        <div class="prep-word">IN</div>
+        <div class="prep-es">dentro de</div>
+        <div class="prep-example">There is a cat <strong>in</strong> the box.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">📚</div>
+        <div class="prep-word">ON</div>
+        <div class="prep-es">encima de (en contacto)</div>
+        <div class="prep-example">There are books <strong>on</strong> the shelf.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">🛋️</div>
+        <div class="prep-word">UNDER</div>
+        <div class="prep-es">debajo de</div>
+        <div class="prep-example">There is a ball <strong>under</strong> the sofa.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">🪑</div>
+        <div class="prep-word">NEXT TO</div>
+        <div class="prep-es">al lado de</div>
+        <div class="prep-example">There is a lamp <strong>next to</strong> the bed.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">🌳</div>
+        <div class="prep-word">BETWEEN</div>
+        <div class="prep-es">entre (dos)</div>
+        <div class="prep-example">There is a cat <strong>between</strong> the trees.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">🏠</div>
+        <div class="prep-word">BEHIND</div>
+        <div class="prep-es">detrás de</div>
+        <div class="prep-example">There is a garden <strong>behind</strong> the house.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">🚪</div>
+        <div class="prep-word">IN FRONT OF</div>
+        <div class="prep-es">delante de</div>
+        <div class="prep-example">There is a car <strong>in front of</strong> the school.</div>
+      </div>
+      <div class="prep-card">
+        <div style="font-size:2.2rem;">⬆️</div>
+        <div class="prep-word">ABOVE</div>
+        <div class="prep-es">encima (sin contacto)</div>
+        <div class="prep-example">There is a fan <strong>above</strong> the table.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🖼️ Examples with scenes</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="scene-container" style="margin-bottom:0;" aria-label="Bedroom scene">
+          <object data="assets/bedroom.svg" type="image/svg+xml" width="100%">
+            <img src="assets/bedroom.svg" alt="A cozy bedroom with a bed, desk, books, and toys">
+          </object>
+        </div>
+        <div>
+          <ul class="example-list">
+            <li>There is a lamp <span class="highlight">next to</span> the bed.</li>
+            <li>There is a ball <span class="highlight">on</span> the floor.</li>
+            <li>There are books <span class="highlight">on</span> the desk.</li>
+            <li>There is a rug <span class="highlight">in front of</span> the bed.</li>
+            <li>There is a shelf <span class="highlight">on</span> the wall.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: GLOSSARY
+       ============================================================ -->
+  <section class="section" id="sec-glossary" aria-label="Mini visual glossary">
+    <div class="section-header">
+      <h2>🔤 Visual Glossary</h2>
+      <p>Key vocabulary words used in the exercises</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Aprende estas palabras — aparecen en todos los ejercicios. ¡Memorízalas!</div>
+    <div class="glossary-grid">
+      <div class="glossary-item"><span class="glos-icon">🪑</span><span class="glos-word">chair</span><span class="glos-es">silla</span></div>
+      <div class="glossary-item"><span class="glos-icon">🖥️</span><span class="glos-word">desk</span><span class="glos-es">escritorio</span></div>
+      <div class="glossary-item"><span class="glos-icon">📚</span><span class="glos-word">books</span><span class="glos-es">libros</span></div>
+      <div class="glossary-item"><span class="glos-icon">🍎</span><span class="glos-word">apple</span><span class="glos-es">manzana</span></div>
+      <div class="glossary-item"><span class="glos-icon">🐱</span><span class="glos-word">cat</span><span class="glos-es">gato</span></div>
+      <div class="glossary-item"><span class="glos-icon">🐶</span><span class="glos-word">dog</span><span class="glos-es">perro</span></div>
+      <div class="glossary-item"><span class="glos-icon">🌳</span><span class="glos-word">tree</span><span class="glos-es">árbol</span></div>
+      <div class="glossary-item"><span class="glos-icon">🌸</span><span class="glos-word">flower</span><span class="glos-es">flor</span></div>
+      <div class="glossary-item"><span class="glos-icon">🏠</span><span class="glos-word">house</span><span class="glos-es">casa</span></div>
+      <div class="glossary-item"><span class="glos-icon">🪟</span><span class="glos-word">window</span><span class="glos-es">ventana</span></div>
+      <div class="glossary-item"><span class="glos-icon">📦</span><span class="glos-word">box</span><span class="glos-es">caja</span></div>
+      <div class="glossary-item"><span class="glos-icon">🛋️</span><span class="glos-word">sofa</span><span class="glos-es">sofá</span></div>
+      <div class="glossary-item"><span class="glos-icon">🛏️</span><span class="glos-word">bed</span><span class="glos-es">cama</span></div>
+      <div class="glossary-item"><span class="glos-icon">🪴</span><span class="glos-word">plant</span><span class="glos-es">planta</span></div>
+      <div class="glossary-item"><span class="glos-icon">🍌</span><span class="glos-word">banana</span><span class="glos-es">plátano</span></div>
+      <div class="glossary-item"><span class="glos-icon">🧃</span><span class="glos-word">juice</span><span class="glos-es">zumo</span></div>
+      <div class="glossary-item"><span class="glos-icon">🥛</span><span class="glos-word">milk</span><span class="glos-es">leche</span></div>
+      <div class="glossary-item"><span class="glos-icon">💡</span><span class="glos-word">lamp</span><span class="glos-es">lámpara</span></div>
+      <div class="glossary-item"><span class="glos-icon">⏰</span><span class="glos-word">clock</span><span class="glos-es">reloj</span></div>
+      <div class="glossary-item"><span class="glos-icon">✏️</span><span class="glos-word">pencil</span><span class="glos-es">lápiz</span></div>
+      <div class="glossary-item"><span class="glos-icon">🌍</span><span class="glos-word">globe</span><span class="glos-es">globo terráqueo</span></div>
+      <div class="glossary-item"><span class="glos-icon">🦁</span><span class="glos-word">lion</span><span class="glos-es">león</span></div>
+      <div class="glossary-item"><span class="glos-icon">🐘</span><span class="glos-word">elephant</span><span class="glos-es">elefante</span></div>
+      <div class="glossary-item"><span class="glos-icon">🐒</span><span class="glos-word">monkey</span><span class="glos-es">mono</span></div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">📊 Countable vs Uncountable Nouns</div>
+      <div class="es-tip">Los nombres contables se pueden contar (1, 2, 3...). Los incontables no se pueden contar directamente.</div>
+      <table class="grammar-table">
+        <thead><tr><th>Countable ✅ (can count)</th><th>Uncountable ❌ (can't count)</th></tr></thead>
+        <tbody>
+          <tr><td>a book, two books</td><td>water (not "one water")</td></tr>
+          <tr><td>a cat, five cats</td><td>milk, juice, bread</td></tr>
+          <tr><td>a chair, ten chairs</td><td>rice, flour, money</td></tr>
+          <tr><td>an apple, three apples</td><td>music, information, homework</td></tr>
+        </tbody>
+      </table>
+      <div class="grammar-box orange">
+        <p>✅ There is <strong>a book</strong>. / There are <strong>three books</strong>. — countable</p>
+        <p>✅ There is <strong>some water</strong>. / Is there <strong>any milk</strong>? — uncountable</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: FILL IN THE BLANK
+       ============================================================ -->
+  <section class="section" id="sec-fill" aria-label="Fill in the blank exercises">
+    <div class="section-header">
+      <h2>✏️ Fill in the Blank</h2>
+      <p>Type "There is", "There are", "Is there", or "Are there" in the gap!</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Escribe la forma correcta en el espacio. ¡Lee la pista en amarillo si necesitas ayuda!</div>
+    <div class="exercises-section" id="fillContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: MULTIPLE CHOICE
+       ============================================================ -->
+  <section class="section" id="sec-mcq" aria-label="Multiple choice exercises">
+    <div class="section-header">
+      <h2>🔘 Multiple Choice</h2>
+      <p>Choose the correct answer from the options!</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Elige la respuesta correcta entre las opciones. Solo hay una respuesta correcta.</div>
+    <div class="exercises-section" id="mcqContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: MATCHING
+       ============================================================ -->
+  <section class="section" id="sec-matching" aria-label="Matching exercises">
+    <div class="section-header">
+      <h2>🔗 Matching</h2>
+      <p>Click a sentence on the left, then click the matching answer on the right!</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Haz clic en la columna izquierda y luego en la columna derecha para emparejar. ¡Las parejas correctas se pondrán verdes!</div>
+    <div class="exercises-section" id="matchContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: IMAGE EXERCISES
+       ============================================================ -->
+  <section class="section" id="sec-images" aria-label="Image-based exercises">
+    <div class="section-header">
+      <h2>🖼️ Image Exercises</h2>
+      <p>Look at the scenes carefully and choose "IS" or "ARE"!</p>
+    </div>
+
+    <!-- Show all scenes for reference -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <div class="scene-container" style="margin:0;" aria-label="Classroom scene">
+        <object data="assets/classroom.svg" type="image/svg+xml" width="100%">
+          <img src="assets/classroom.svg" alt="Classroom scene">
+        </object>
+        <div class="scene-caption">🏫 Classroom</div>
+      </div>
+      <div class="scene-container" style="margin:0;" aria-label="Kitchen scene">
+        <object data="assets/kitchen.svg" type="image/svg+xml" width="100%">
+          <img src="assets/kitchen.svg" alt="Kitchen scene">
+        </object>
+        <div class="scene-caption">🍳 Kitchen</div>
+      </div>
+      <div class="scene-container" style="margin:0;" aria-label="Bedroom scene">
+        <object data="assets/bedroom.svg" type="image/svg+xml" width="100%">
+          <img src="assets/bedroom.svg" alt="Bedroom scene">
+        </object>
+        <div class="scene-caption">🛏️ Bedroom</div>
+      </div>
+      <div class="scene-container" style="margin:0;" aria-label="Zoo scene">
+        <object data="assets/zoo.svg" type="image/svg+xml" width="100%">
+          <img src="assets/zoo.svg" alt="Zoo scene">
+        </object>
+        <div class="scene-caption">🦁 Zoo</div>
+      </div>
+    </div>
+
+    <div class="es-tip" style="margin-bottom:16px;">Mira las imágenes de arriba y luego elige IS o ARE para cada oración. ¡Cuenta los objetos!</div>
+    <div class="exercises-section" id="imgContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: TRUE / FALSE
+       ============================================================ -->
+  <section class="section" id="sec-truefalse" aria-label="True or False exercises">
+    <div class="section-header">
+      <h2>✅ True or False?</h2>
+      <p>Look at the scenes above and decide if the sentence is TRUE or FALSE!</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Mira las escenas y decide si las oraciones son VERDADERAS (TRUE) o FALSAS (FALSE).</div>
+
+    <!-- Quick access to scenes -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+      <button class="btn btn-sm" style="background:#f3e5ff;color:var(--primary);" onclick="document.getElementById('sec-images').querySelectorAll('.scene-container')[0]?.scrollIntoView({behavior:'smooth'})">🏫 See Classroom</button>
+      <button class="btn btn-sm" style="background:#f3e5ff;color:var(--primary);" onclick="showSection('images')">🖼️ View All Scenes</button>
+    </div>
+
+    <div class="exercises-section" id="tfContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: WRITING
+       ============================================================ -->
+  <section class="section" id="sec-writing" aria-label="Writing exercises">
+    <div class="section-header">
+      <h2>✍️ Writing Exercises</h2>
+      <p>Write your own sentences! Use the rubric checklist to check yourself.</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Escribe tus propias oraciones. Usa la lista de verificación (rubric) para comprobar que lo has hecho bien. ¡Hay un modelo de respuesta para comparar!</div>
+    <div class="exercises-section" id="writingContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: UNSCRAMBLE
+       ============================================================ -->
+  <section class="section" id="sec-unscramble" aria-label="Unscramble sentence exercises">
+    <div class="section-header">
+      <h2>🔀 Unscramble the Sentence!</h2>
+      <p>Click the words in the correct order to build a sentence!</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Haz clic en las palabras en el orden correcto para formar una oración. Haz clic en una palabra usada para quitarla.</div>
+    <div class="exercises-section" id="unscrambleContainer"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: GAMES
+       ============================================================ -->
+  <section class="section" id="sec-games" aria-label="Mini games section">
+    <div class="section-header">
+      <h2>🎮 Mini Games</h2>
+      <p>Learn while having fun! Four games to practise "There is / There are"</p>
+    </div>
+
+    <!-- GAME 1: Flashcard Flip -->
+    <div class="game-container">
+      <div class="game-title">🃏 Game 1: Flashcard Flip</div>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:16px;">Click the card to see the answer! Then go to the next one.</p>
+      <div class="flashcard">
+        <div class="flashcard-inner" id="flashcardInner" role="button" aria-label="Flashcard - click to flip" tabindex="0">
+          <div class="flashcard-front">
+            <div class="card-emoji" id="fc-emoji">🐈</div>
+            <div class="card-question" id="fc-question">One cat. Use "is" or "are"?</div>
+            <p style="margin-top:12px;opacity:0.7;font-size:0.85rem;">Click to flip! 👆</p>
+          </div>
+          <div class="flashcard-back">
+            <div class="card-answer" id="fc-answer">There IS a cat.</div>
+            <div class="card-example" id="fc-example">There is a cat on the sofa.</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="nextCard()">➡️ Next Card</button>
+        <button class="btn btn-warning" onclick="flipCard()">🔄 Flip</button>
+      </div>
+    </div>
+
+    <!-- GAME 2: Bubble Pop -->
+    <div class="game-container">
+      <div class="game-title">🫧 Game 2: Bubble Pop!</div>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:12px;">Pop the bubble with the correct word!</p>
+      <div class="detective-question" id="bubbleQuestion"></div>
+      <div class="game-score-display" id="bubbleScore">Score: 0</div>
+      <div class="bubble-grid" id="bubbleGrid"></div>
+    </div>
+
+    <!-- GAME 3: Classroom Detective -->
+    <div class="game-container">
+      <div class="game-title">🕵️ Game 3: Classroom Detective</div>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:12px;">Answer questions about the classroom scene!</p>
+      <div class="scene-container" aria-label="Classroom scene for detective game">
+        <object data="assets/classroom.svg" type="image/svg+xml" width="100%">
+          <img src="assets/classroom.svg" alt="Classroom scene for detective game">
+        </object>
+      </div>
+      <div id="detectiveArea"></div>
+    </div>
+
+    <!-- GAME 4: Scene Fill -->
+    <div class="game-container">
+      <div class="game-title">🎯 Game 4: Fill the Scene!</div>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:12px;">Look at all the scenes and choose the right word!</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+        <div class="scene-container" style="margin:0;">
+          <object data="assets/kitchen.svg" type="image/svg+xml" width="100%"><img src="assets/kitchen.svg" alt="Kitchen"></object>
+          <div class="scene-caption" style="font-size:0.78rem;">🍳 Kitchen</div>
+        </div>
+        <div class="scene-container" style="margin:0;">
+          <object data="assets/bedroom.svg" type="image/svg+xml" width="100%"><img src="assets/bedroom.svg" alt="Bedroom"></object>
+          <div class="scene-caption" style="font-size:0.78rem;">🛏️ Bedroom</div>
+        </div>
+        <div class="scene-container" style="margin:0;">
+          <object data="assets/zoo.svg" type="image/svg+xml" width="100%"><img src="assets/zoo.svg" alt="Zoo"></object>
+          <div class="scene-caption" style="font-size:0.78rem;">🦁 Zoo</div>
+        </div>
+      </div>
+      <div id="sceneFillArea"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION: FINAL QUIZ
+       ============================================================ -->
+  <section class="section" id="sec-quiz" aria-label="Final quiz section">
+    <div class="section-header">
+      <h2>🏆 Final Quiz</h2>
+      <p>Test everything you've learned! Only one attempt per device.</p>
+    </div>
+    <div class="es-tip" style="margin-bottom:16px;">Este es el examen final. Solo puedes enviarlo una vez. Repasa todas las secciones antes de intentarlo. ¡Buena suerte! 🍀</div>
+    <div id="quizContainer"></div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer role="contentinfo">
+  <p>🌟 There Is / There Are — Interactive English Learning Site for Kids (A1–A2) | Made with ❤️ for young learners</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
