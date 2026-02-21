@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="A colorful zoo scene with lions, monkeys, elephants, birds, and trees">
+  <!-- Sky -->
+  <rect width="600" height="400" fill="#E1F5FE"/>
+  <!-- Ground -->
+  <rect y="300" width="600" height="100" fill="#A5D6A7"/>
+  <!-- Path -->
+  <rect x="250" y="290" width="100" height="110" fill="#D7CCC8"/>
+  <!-- Sun -->
+  <circle cx="555" cy="50" r="35" fill="#FFD54F"/>
+  <line x1="555" y1="5" x2="555" y2="0" stroke="#FFB300" stroke-width="3"/>
+  <line x1="555" y1="95" x2="555" y2="100" stroke="#FFB300" stroke-width="3"/>
+  <line x1="510" y1="50" x2="505" y2="50" stroke="#FFB300" stroke-width="3"/>
+  <line x1="600" y1="50" x2="595" y2="50" stroke="#FFB300" stroke-width="3"/>
+  <!-- Clouds -->
+  <ellipse cx="100" cy="40" rx="50" ry="22" fill="white"/>
+  <ellipse cx="130" cy="30" rx="38" ry="20" fill="white"/>
+  <ellipse cx="70" cy="35" rx="30" ry="18" fill="white"/>
+  <ellipse cx="380" cy="55" rx="45" ry="20" fill="white"/>
+  <ellipse cx="408" cy="45" rx="35" ry="18" fill="white"/>
+  <!-- Trees -->
+  <rect x="10" y="220" width="18" height="80" rx="4" fill="#5D4037"/>
+  <circle cx="19" cy="200" r="40" fill="#66BB6A"/>
+  <circle cx="5" cy="215" r="28" fill="#4CAF50"/>
+  <circle cx="35" cy="215" r="28" fill="#4CAF50"/>
+  <rect x="555" y="220" width="18" height="80" rx="4" fill="#5D4037"/>
+  <circle cx="564" cy="200" r="40" fill="#66BB6A"/>
+  <circle cx="548" cy="215" r="28" fill="#4CAF50"/>
+  <circle cx="582" cy="215" r="28" fill="#4CAF50"/>
+  <!-- LION CAGE (left) -->
+  <rect x="40" y="150" width="180" height="150" rx="8" fill="#FFF8E1" stroke="#795548" stroke-width="3"/>
+  <!-- Cage bars -->
+  <line x1="70" y1="150" x2="70" y2="300" stroke="#795548" stroke-width="3"/>
+  <line x1="100" y1="150" x2="100" y2="300" stroke="#795548" stroke-width="3"/>
+  <line x1="130" y1="150" x2="130" y2="300" stroke="#795548" stroke-width="3"/>
+  <line x1="160" y1="150" x2="160" y2="300" stroke="#795548" stroke-width="3"/>
+  <line x1="190" y1="150" x2="190" y2="300" stroke="#795548" stroke-width="3"/>
+  <!-- Sign -->
+  <rect x="75" y="135" width="100" height="22" rx="5" fill="#FF9800"/>
+  <text x="125" y="151" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">🦁 LIONS</text>
+  <!-- Lion body -->
+  <ellipse cx="110" cy="255" rx="50" ry="30" fill="#FFB74D"/>
+  <!-- Lion head -->
+  <circle cx="155" cy="238" r="28" fill="#FFB74D"/>
+  <!-- Mane -->
+  <circle cx="155" cy="238" r="34" fill="#E65100" opacity="0.5"/>
+  <!-- Face -->
+  <circle cx="148" cy="234" r="4" fill="#5D4037"/>
+  <circle cx="162" cy="234" r="4" fill="#5D4037"/>
+  <ellipse cx="155" cy="243" rx="6" ry="4" fill="#E91E63"/>
+  <path d="M149 246 Q155 250 161 246" stroke="#5D4037" stroke-width="1.5" fill="none"/>
+  <!-- Whiskers -->
+  <line x1="130" y1="243" x2="148" y2="243" stroke="#5D4037" stroke-width="1"/>
+  <line x1="132" y1="247" x2="148" y2="246" stroke="#5D4037" stroke-width="1"/>
+  <line x1="162" y1="243" x2="180" y2="243" stroke="#5D4037" stroke-width="1"/>
+  <!-- Tail -->
+  <path d="M60 255 Q40 230 55 210" stroke="#FFB74D" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="55" cy="210" r="10" fill="#E65100"/>
+  <!-- Second lion (smaller, cub) -->
+  <ellipse cx="110" cy="285" rx="28" ry="18" fill="#FFB74D"/>
+  <circle cx="88" cy="272" r="18" fill="#FFB74D"/>
+  <circle cx="88" cy="272" r="22" fill="#FF8F00" opacity="0.4"/>
+  <circle cx="83" cy="269" r="3" fill="#5D4037"/>
+  <circle cx="93" cy="269" r="3" fill="#5D4037"/>
+  <!-- ELEPHANT AREA (right) -->
+  <rect x="380" y="150" width="180" height="150" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+  <!-- Elephant fence bars -->
+  <line x1="410" y1="150" x2="410" y2="300" stroke="#9C27B0" stroke-width="3"/>
+  <line x1="440" y1="150" x2="440" y2="300" stroke="#9C27B0" stroke-width="3"/>
+  <line x1="470" y1="150" x2="470" y2="300" stroke="#9C27B0" stroke-width="3"/>
+  <line x1="500" y1="150" x2="500" y2="300" stroke="#9C27B0" stroke-width="3"/>
+  <line x1="530" y1="150" x2="530" y2="300" stroke="#9C27B0" stroke-width="3"/>
+  <rect x="395" y="135" width="110" height="22" rx="5" fill="#9C27B0"/>
+  <text x="450" y="151" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">🐘 ELEPHANTS</text>
+  <!-- Elephant body -->
+  <ellipse cx="455" cy="258" rx="55" ry="38" fill="#90A4AE"/>
+  <!-- Elephant head -->
+  <circle cx="500" cy="232" r="32" fill="#90A4AE"/>
+  <!-- Trunk -->
+  <path d="M510 258 Q535 270 530 290" stroke="#90A4AE" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Eye -->
+  <circle cx="510" cy="224" r="5" fill="#37474F"/>
+  <circle cx="511" cy="223" r="2" fill="white"/>
+  <!-- Ear -->
+  <ellipse cx="470" cy="232" rx="20" ry="28" fill="#B0BEC5"/>
+  <!-- Tusk -->
+  <path d="M505 252 Q525 260 520 270" stroke="#FFF9C4" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Legs -->
+  <rect x="415" y="283" width="22" height="25" rx="6" fill="#90A4AE"/>
+  <rect x="448" y="283" width="22" height="25" rx="6" fill="#90A4AE"/>
+  <rect x="475" y="283" width="22" height="25" rx="6" fill="#90A4AE"/>
+  <!-- BIRDS section - 4 birds flying -->
+  <ellipse cx="220" cy="80" rx="14" ry="8" fill="#66BB6A"/>
+  <ellipse cx="209" cy="76" rx="9" ry="5" fill="#43A047" transform="rotate(-20,209,76)"/>
+  <ellipse cx="231" cy="76" rx="9" ry="5" fill="#43A047" transform="rotate(20,231,76)"/>
+  <circle cx="235" cy="77" r="5" fill="#43A047"/>
+  <ellipse cx="270" cy="60" rx="14" ry="8" fill="#EF5350"/>
+  <ellipse cx="259" cy="56" rx="9" ry="5" fill="#E53935" transform="rotate(-20,259,56)"/>
+  <ellipse cx="281" cy="56" rx="9" ry="5" fill="#E53935" transform="rotate(20,281,56)"/>
+  <circle cx="284" cy="57" r="5" fill="#E53935"/>
+  <ellipse cx="330" cy="75" rx="14" ry="8" fill="#FFB74D"/>
+  <ellipse cx="319" cy="71" rx="9" ry="5" fill="#FFA726" transform="rotate(-20,319,71)"/>
+  <ellipse cx="341" cy="71" rx="9" ry="5" fill="#FFA726" transform="rotate(20,341,71)"/>
+  <circle cx="344" cy="72" r="5" fill="#FFA726"/>
+  <ellipse cx="380" cy="90" rx="14" ry="8" fill="#AB47BC"/>
+  <ellipse cx="369" cy="86" rx="9" ry="5" fill="#9C27B0" transform="rotate(-20,369,86)"/>
+  <ellipse cx="391" cy="86" rx="9" ry="5" fill="#9C27B0" transform="rotate(20,391,86)"/>
+  <circle cx="394" cy="87" r="5" fill="#9C27B0"/>
+  <!-- MONKEYS on tree -->
+  <rect x="293" y="100" width="15" height="200" rx="5" fill="#5D4037"/>
+  <!-- branches -->
+  <rect x="293" y="130" width="80" height="10" rx="5" fill="#5D4037"/>
+  <rect x="230" y="160" width="75" height="10" rx="5" fill="#5D4037"/>
+  <!-- Monkey 1 -->
+  <circle cx="350" cy="112" r="18" fill="#FFB74D"/>
+  <circle cx="338" cy="108" r="8" fill="#FFA726"/>
+  <circle cx="362" cy="108" r="8" fill="#FFA726"/>
+  <ellipse cx="350" cy="122" rx="10" ry="7" fill="#FFCC02"/>
+  <circle cx="345" cy="108" r="3" fill="#5D4037"/>
+  <circle cx="355" cy="108" r="3" fill="#5D4037"/>
+  <path d="M365 110 Q375 100 365 95" stroke="#FFB74D" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Monkey 2 on lower branch -->
+  <circle cx="250" cy="142" r="16" fill="#FFB74D"/>
+  <circle cx="239" cy="138" r="7" fill="#FFA726"/>
+  <circle cx="261" cy="138" r="7" fill="#FFA726"/>
+  <ellipse cx="250" cy="151" rx="9" ry="6" fill="#FFCC02"/>
+  <circle cx="245" cy="138" r="3" fill="#5D4037"/>
+  <circle cx="255" cy="138" r="3" fill="#5D4037"/>
+  <path d="M264 142 Q280 132 272 125" stroke="#FFB74D" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Score label: 2 lions, 1 elephant, 4 birds, 2 monkeys -->
+</svg>
