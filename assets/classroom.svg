@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="A colorful classroom with desks, chairs, a blackboard, books, and windows">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FFF9F0"/>
+  <!-- Floor -->
+  <rect y="310" width="600" height="90" fill="#E8D5B7"/>
+  <!-- Wall -->
+  <rect width="600" height="310" fill="#FFF3E0"/>
+  <!-- Window left -->
+  <rect x="30" y="40" width="100" height="80" rx="8" fill="#B3E5FC" stroke="#42A5F5" stroke-width="3"/>
+  <line x1="80" y1="40" x2="80" y2="120" stroke="#42A5F5" stroke-width="2"/>
+  <line x1="30" y1="80" x2="130" y2="80" stroke="#42A5F5" stroke-width="2"/>
+  <!-- Window right -->
+  <rect x="470" y="40" width="100" height="80" rx="8" fill="#B3E5FC" stroke="#42A5F5" stroke-width="3"/>
+  <line x1="520" y1="40" x2="520" y2="120" stroke="#42A5F5" stroke-width="2"/>
+  <line x1="470" y1="80" x2="570" y2="80" stroke="#42A5F5" stroke-width="2"/>
+  <!-- Blackboard -->
+  <rect x="160" y="30" width="280" height="150" rx="8" fill="#2E7D32" stroke="#1B5E20" stroke-width="4"/>
+  <rect x="170" y="40" width="260" height="130" rx="4" fill="#388E3C"/>
+  <!-- Chalk writing on board -->
+  <text x="300" y="90" font-family="Comic Sans MS, cursive" font-size="18" fill="white" text-anchor="middle" font-weight="bold">There is a cat.</text>
+  <text x="300" y="120" font-family="Comic Sans MS, cursive" font-size="18" fill="white" text-anchor="middle">There are 3 books.</text>
+  <!-- Board eraser -->
+  <rect x="400" y="178" width="30" height="12" rx="4" fill="#FFEB3B"/>
+  <!-- Teacher's desk -->
+  <rect x="190" y="225" width="220" height="20" rx="6" fill="#8D6E63"/>
+  <rect x="200" y="245" width="30" height="60" rx="4" fill="#795548"/>
+  <rect x="370" y="245" width="30" height="60" rx="4" fill="#795548"/>
+  <!-- Apple on teacher desk -->
+  <circle cx="310" cy="218" r="14" fill="#F44336"/>
+  <rect x="309" y="204" width="4" height="8" fill="#4CAF50"/>
+  <!-- Books on teacher desk -->
+  <rect x="230" y="208" width="15" height="20" rx="2" fill="#3F51B5"/>
+  <rect x="247" y="210" width="15" height="18" rx="2" fill="#E91E63"/>
+  <rect x="264" y="206" width="15" height="22" rx="2" fill="#FF9800"/>
+  <!-- Student desks row 1 -->
+  <rect x="40" y="260" width="80" height="15" rx="4" fill="#A1887F"/>
+  <rect x="50" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <rect x="90" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <!-- Chair row 1 left -->
+  <rect x="38" y="300" width="84" height="8" rx="4" fill="#FFB74D"/>
+  <rect x="45" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <rect x="102" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <!-- Student desk 2 -->
+  <rect x="260" y="260" width="80" height="15" rx="4" fill="#A1887F"/>
+  <rect x="270" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <rect x="310" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <rect x="258" y="300" width="84" height="8" rx="4" fill="#FFB74D"/>
+  <rect x="265" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <rect x="322" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <!-- Book on student desk 2 -->
+  <rect x="285" y="250" width="22" height="14" rx="2" fill="#9C27B0"/>
+  <!-- Student desk 3 -->
+  <rect x="480" y="260" width="80" height="15" rx="4" fill="#A1887F"/>
+  <rect x="490" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <rect x="530" y="275" width="20" height="35" rx="3" fill="#8D6E63"/>
+  <rect x="478" y="300" width="84" height="8" rx="4" fill="#FFB74D"/>
+  <rect x="485" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <rect x="542" y="308" width="12" height="20" rx="2" fill="#FFA726"/>
+  <!-- Pencil on desk 3 -->
+  <rect x="500" y="253" width="5" height="20" rx="2" fill="#FFEB3B" transform="rotate(-15,502,263)"/>
+  <!-- Globe -->
+  <circle cx="560" cy="190" r="28" fill="#42A5F5" stroke="#1565C0" stroke-width="2"/>
+  <ellipse cx="560" cy="190" rx="28" ry="10" fill="none" stroke="#1565C0" stroke-width="1.5"/>
+  <ellipse cx="560" cy="190" rx="14" ry="28" fill="none" stroke="#1565C0" stroke-width="1.5"/>
+  <rect x="556" y="218" width="8" height="20" rx="2" fill="#795548"/>
+  <rect x="545" y="236" width="30" height="6" rx="3" fill="#5D4037"/>
+  <!-- Trash bin -->
+  <rect x="35" y="270" width="24" height="30" rx="4" fill="#90A4AE"/>
+  <rect x="33" y="266" width="28" height="7" rx="3" fill="#78909C"/>
+  <!-- Clock on wall -->
+  <circle cx="300" cy="17" r="13" fill="white" stroke="#FF7043" stroke-width="3"/>
+  <line x1="300" y1="17" x2="300" y2="10" stroke="#333" stroke-width="2"/>
+  <line x1="300" y1="17" x2="306" y2="17" stroke="#333" stroke-width="2"/>
+  <!-- Labels count helpers (invisible, for exercises) -->
+  <!-- 1 blackboard, 3 books on teacher desk, 1 apple, 2 windows, 3 student desks, 1 globe, 1 clock -->
+</svg>
