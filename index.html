@@ -8,7 +8,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<!-- ===================== PANTALLA DE BIENVENIDA ===================== -->
+<div id="loginScreen" style="
+  position:fixed; inset:0;
+  background: linear-gradient(135deg, #7B2FBE 0%, #9D4EDD 50%, #118AB2 100%);
+  display:flex; align-items:center; justify-content:center;
+  z-index:99999; flex-direction:column; gap:16px; padding:24px;
+  font-family: 'Nunito', sans-serif;
+">
+  <div style="font-size:4rem;">🌟</div>
+  <h1 style="color:white;font-size:2rem;text-align:center;margin:0;">
+    There Is / There Are
+  </h1>
+  <p style="color:rgba(255,255,255,0.85);text-align:center;margin:0;">
+    Enter your name to start learning!
+  </p>
+  <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;text-align:center;margin:0;">
+    🇪🇸 Escribe tu nombre para comenzar
+  </p>
+  <input
+    id="studentNameInput"
+    placeholder="Your name... / Tu nombre..."
+    maxlength="50"
+    style="
+      padding:14px 24px; border-radius:50px; border:3px solid rgba(255,255,255,0.3);
+      font-size:1.1rem; width:100%; max-width:320px; text-align:center;
+      background:rgba(255,255,255,0.15); color:white; outline:none;
+      font-family:'Nunito',sans-serif; font-weight:700;
+    "
+    onkeypress="if(event.key==='Enter') registerStudent()"
+  >
+  <button
+    onclick="registerStudent()"
+    id="startBtn"
+    style="
+      background:#FFD166; color:#2D2D2D; border:none;
+      padding:14px 36px; border-radius:50px; font-size:1.1rem;
+      font-weight:800; cursor:pointer; font-family:'Nunito',sans-serif;
+      transition:transform 0.2s; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    "
+    onmouseover="this.style.transform='scale(1.05)'"
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    🚀 Start Learning!
+  </button>
+  <div id="loginError" style="color:#FFD166;font-weight:700;display:none;"></div>
+  <div id="loginLoading" style="color:white;display:none;">⏳ Loading...</div>
+</div>
 <!-- ===================== CELEBRATION OVERLAY ===================== -->
 <div class="celebration" id="celebration" aria-hidden="true"></div>
 
