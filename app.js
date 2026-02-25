@@ -35,13 +35,30 @@ const STATE = {
 // =========================================================
 // SCORE MANAGEMENT
 // =========================================================
-function updateScore(delta = 1) {
+async function updateScore(delta = 1, exerciseId = '', exerciseType = '', correct = true) {
   STATE.score += delta;
   STATE.totalAnswered += 1;
   localStorage.setItem('tita_score', STATE.score);
   localStorage.setItem('tita_answered', STATE.totalAnswered);
   renderScoreBadge();
   updateProgressBar();
+
+  // Guardar en Supabase si hay estudiante registrado y hay conexión
+  const studentId = localStorage.getItem('tita_student_id');
+  if (db && studentId && exerciseId) {
+    try {
+      await db.from('exercise_results').insert({
+        student_id: studentId,
+        exercise_id: exerciseId,
+        exercise_type: exerciseType,
+        correct: correct,
+        score: delta
+      });
+    } catch (err) {
+      console.warn('No se pudo guardar en Supabase:', err);
+      // La página sigue funcionando aunque falle Supabase
+    }
+  }
 }
 
 function markDone(id) {
