@@ -1162,11 +1162,131 @@ function triggerCelebration() {
 // =========================================================
 // INIT
 // =========================================================
+// =========================================================
+// REGISTRO DE ESTUDIANTE
+// =========================================================
+async function registerStudent() {
+  const nameInput = document.getElementById('studentNameInput');
+  const errorEl = document.getElementById('loginError');
+  const loadingEl = document.getElementById('loginLoading');
+  const startBtn = document.getElementById('startBtn');
+
+  const name = nameInput.value.trim();
+
+  // Validación
+  if (!name) {
+    errorEl.textContent = '⚠️ Please enter your name! / ¡Escribe tu nombre!';
+    errorEl.style.display = 'block';
+    nameInput.focus();
+    return;
+  }
+  if (name.length < 2) {
+    errorEl.textContent = '⚠️ Name too short! / ¡Nombre muy corto!';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  // Mostrar loading
+  errorEl.style.display = 'none';
+  loadingEl.style.display = 'block';
+  startBtn.disabled = true;
+
+  try {
+    let studentId = localStorage.getItem('tita_student_id');
+
+    if (!studentId) {
+      if (db) {
+        // Guardar en Supabase
+        const { data, error } = await db
+          .from('students')
+          .insert({ name: name })
+          .select()
+          .single();
+
+        if (error) throw error;
+
+        studentId = data.id;
+      } else {
+        // Si no hay Supabase, generar ID local
+        studentId = 'local-' + Date.now();
+      }
+
+      localStorage.setItem('tita_student_id', studentId);
+      localStorage.setItem('tita_student_name', name);
+    }
+
+    STATE.studentName = name;
+
+    // Ocultar pantalla de login con animación suave
+    const loginScreen = document.getElementById('loginScreen');
+    loginScreen.style.transition = 'opacity 0.5s ease';
+    loginScreen.style.opacity = '0';
+    setTimeout(() => { loginScreen.style.display = 'none'; }, 500);
+
+  } catch (err) {
+    console.error('Error al registrar:', err);
+    // Si falla Supabase, guardar solo localmente
+    const studentId = 'local-' + Date.now();
+    localStorage.setItem('tita_student_id', studentId);
+    localStorage.setItem('tita_student_name', name);
+    STATE.studentName = name;
+    document.getElementById('loginScreen').style.display = 'none';
+  } finally {
+    loadingEl.style.display = 'none';
+    startBtn.disabled = false;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Inicializar Supabase
+  initSupabase();
+
+  // Verificar si el estudiante ya se registró antes
+  const savedId = localStorage.getItem('tita_student_id');
+  const savedName = localStorage.getItem('tita_student_name');
+  if (savedId && savedName) {
+    document.getElementById('loginScreen').style.display = 'none';
+    STATE.studentName = savedName;
+    // Actualizar saludo si quieres mostrar el nombre
+  }
+
   // Nav tabs
   document.querySelectorAll('.nav-tab').forEach(tab => {
     tab.addEventListener('click', () => showSection(tab.dataset.section));
   });
+
+  // Teacher button
+  document.getElementById('teacherBtn').addEventListener('click', toggleTeacherMode);
+
+  // Score
+  renderScoreBadge();
+  updateProgressBar();
+
+  // Build exercises
+  buildFillExercises();
+  buildMCQExercises();
+  buildTFExercises();
+  buildMatchingExercises();
+  buildImageExercises();
+  buildWritingExercises();
+  buildUnscrambleExercises();
+  buildFlashcardGame();
+  buildBubbleGame();
+  buildDetectiveGame();
+  buildSceneFillGame();
+
+  // Flashcard click
+  const fci = document.getElementById('flashcardInner');
+  if (fci) fci.addEventListener('click', flipCard);
+
+  // Quiz tab
+  document.querySelector('.nav-tab[data-section="quiz"]').addEventListener('click', () => {
+    setTimeout(loadQuiz, 100);
+  });
+
+  // Show first section
+  showSection('learn');
+});
 
   // Teacher button
   document.getElementById('teacherBtn').addEventListener('click', toggleTeacherMode);
