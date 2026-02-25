@@ -1,3 +1,21 @@
+// =========================================================
+// CONFIGURACIÓN SUPABASE
+// Reemplaza estos valores con los tuyos
+// =========================================================
+const SUPABASE_URL = 'https://TU-URL-AQUI.supabase.co';  // <-- pon tu URL
+const SUPABASE_KEY = 'TU-ANON-KEY-AQUI';                  // <-- pon tu key
+
+// Inicializar cliente de Supabase
+// (la librería se carga desde el CDN en index.html)
+let db = null;
+function initSupabase() {
+  if (window.supabase) {
+    db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    console.log('✅ Supabase conectado');
+  } else {
+    console.warn('⚠️ Supabase no disponible, usando solo localStorage');
+  }
+}
 /**
  * THERE IS / THERE ARE — Interactive English Learning Site
  * app.js — All interactivity, exercises, scoring, games
