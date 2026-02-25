@@ -2,8 +2,8 @@
 // CONFIGURACIÓN SUPABASE
 // Reemplaza estos valores con los tuyos
 // =========================================================
-const SUPABASE_URL = https://egvuvjbsheotlemejdwj.supabase.co;  
-const SUPABASE_KEY = sb_publishable_3iOXPEKfuotbe_WFrc6hzg_BzggXEGP;                    
+const SUPABASE_URL = https://egvuvjbsheotlemejdwj.supabase.co';  
+const SUPABASE_KEY = sb_publishable_3iOXPEKfuotbe_WFrc6hzg_BzggXEGP';                    
 // Inicializar cliente de Supabase
 // (la librería se carga desde el CDN en index.html)
 let db = null;
